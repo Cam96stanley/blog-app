@@ -1,0 +1,42 @@
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+
+const HeroSection = () => {
+  return (
+    <div className="lg:flex lg:items-center">
+      <div className="py-12 md:py-20 px-4 text-center md:text-left max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-6">
+          <span className="text-emerald-400">Grow</span> as a developer{" "}
+          <span className="text-emerald-400">with</span>{" "}
+          <span className="text-emerald-400">DevRoots</span>
+        </h1>
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <ChevronRight size={75} className="text-emerald-400" />
+          <p className="text-lg md:text-xl text-zinc-300 tracking-wider max-w-xl">
+            A blog for new devs to share their journey and learn together.
+          </p>
+        </div>
+        <ul className="flex gap-8 justify-center text-black md:justify-start mt-12">
+          <li>
+            <Link
+              className="bg-emerald-400 rounded-4xl py-2 px-4 text-xl md:text-2xl  cursor-pointer"
+              href="#"
+            >
+              Signup
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="bg-emerald-400 rounded-4xl py-2 px-4 text-xl md:text-2xl  cursor-pointer"
+              href="#"
+            >
+              Login
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;

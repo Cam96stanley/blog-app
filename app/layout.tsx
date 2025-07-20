@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-spaceGrotesk",
   subsets: ["latin"],
 });
 
@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.variable} antialiased bg-neutral-700`}>
+      <body
+        className={`${spaceGrotesk.variable} antialiased bg-neutral-700 text-zinc-100 font-spaceGrotesk`}
+      >
         <Navbar />
-        <main>{children}</main>
+        <main className="p-4">{children}</main>
       </body>
     </html>
   );

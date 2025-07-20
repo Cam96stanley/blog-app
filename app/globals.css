@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-quicksand: var(--font-quicksand);
+  --font-spaceGrotesk: var(--font-spaceGrotesk);
 }

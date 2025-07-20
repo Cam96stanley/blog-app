@@ -1,3 +1,11 @@
-export default function Home() {
-  return <p className="font-quicksand">Hello World</p>;
-}
+import HeroSection from "@/components/HeroSection";
+
+const Home = () => {
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
+};
+
+export default Home;
