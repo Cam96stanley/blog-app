@@ -17,9 +17,16 @@ const Navbar = () => {
         className="w-40 md:w-50 h-auto"
       />
       {/* Desktop Menu */}
-      <ul className="hidden md:text-xl md:flex text-lg text-zinc-100 px-2 hover:text-emerald-400">
+      <ul className="hidden md:text-xl md:flex text-lg text-zinc-100 px-2 gap-4">
         <li>
-          <Link href="#">Login</Link>
+          <Link className="hover:text-emerald-400" href="#">
+            Login
+          </Link>
+        </li>
+        <li>
+          <Link className="hover:text-emerald-400" href="#">
+            Sign up
+          </Link>
         </li>
       </ul>
 
@@ -37,10 +44,23 @@ const Navbar = () => {
       </button>
 
       {isOpen && (
-        <ul className="absolute top-full right-4 mt-2 bg-zinc-900 text-white hover:text-emerald-400 shadow-md p-4 rounded-md w-40 flex flex-col gap-4 text-lg md:hidden z-50">
+        <ul className="absolute top-full right-4 mt-2 bg-zinc-900 text-white shadow-md p-4 rounded-md w-40 flex flex-col gap-4 text-lg md:hidden z-50">
           <li>
-            <Link href="#" onClick={() => setIsOpen(false)}>
+            <Link
+              href="#"
+              className="hover:text-emerald-400"
+              onClick={() => setIsOpen(false)}
+            >
               Login
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#"
+              className="hover:text-emerald-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Sign up
             </Link>
           </li>
         </ul>
