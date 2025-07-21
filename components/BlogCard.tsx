@@ -7,7 +7,7 @@ const BlogCard = ({ posts }: BlogCardProps) => {
       {posts.map((post: Post) => (
         <div
           key={post.id}
-          className="bg-zinc-100 border border-emerald-300 rounded-2xl p-6 shadow hover:shadow-lg transition duration-300"
+          className="bg-zinc-100 border border-emerald-300 rounded-2xl p-6 shadow transition duration-300 transform hover:-translate-y-1 hover:shadow-xl cursor-pointer"
         >
           <h2 className="text-xl font-bold text-emerald-800 mb-2">
             {post.title}

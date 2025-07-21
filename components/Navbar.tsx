@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="flex justify-between items-center p-2 rounded-b-2xl relative bg-neutral-800">
+    <nav className="flex justify-between items-center p-2 rounded-b-2xl relative bg-neutral-700 border-b-2 border-b-emerald-400">
       <Image
         src={DevRoots}
         alt="The words DevRoots with a pine tree to the left of it against a blue background."
