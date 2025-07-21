@@ -1,24 +1,7 @@
 import Link from "next/link";
-import { getPosts } from "@/lib/api";
+import { Post, BlogCardProps } from "@/src/types/posts";
 
-interface Author {
-  id: string;
-  name: string;
-  username: string;
-}
-
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-  is_archived: boolean;
-  created_at: string;
-  updated_at: string;
-  author: Author;
-}
-
-const BlogCard = async () => {
-  const posts: Post[] = await getPosts();
+const BlogCard = ({ posts }: BlogCardProps) => {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post: Post) => (

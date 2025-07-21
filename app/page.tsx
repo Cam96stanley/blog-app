@@ -1,9 +1,11 @@
-import HomeBlogSection from "@/components/HomeBlogSection";
 import { ChevronRight } from "lucide-react";
-
+import BlogCard from "@/components/BlogCard";
 import HeroSection from "@/components/HeroSection";
+import { getPosts } from "@/lib/api";
+import { Post } from "@/src/types/posts";
 
-const Home = () => {
+const Home = async () => {
+  const posts: Post[] = await getPosts();
   return (
     <>
       <HeroSection />
@@ -12,7 +14,7 @@ const Home = () => {
           <ChevronRight className="text-emerald-400" size={36} />
           <h2 className="text-3xl my-8">Recent Blogs</h2>
         </div>
-        <HomeBlogSection />
+        <BlogCard posts={posts.slice(0, 4)} />
       </section>
     </>
   );
